@@ -10,18 +10,25 @@ You write your code and text as you would any other day, just let garlic protect
 | POV          | Result                                |
 |--------------|---------------------------------------|
 | You Write    | `<p>This is a test piece of text</p>` |
-| Scraper Sees | ![final](./media/final.png)           |
-| User Sees    | ![user](./media/user.png)             |
+| Scraper Sees | ![final](https://raw.githubusercontent.com/velocitatem/garlic/main/media/final.png)           |
+| User Sees    | ![user](https://raw.githubusercontent.com/velocitatem/garlic/main/media/user.png)             |
 
 # How?
 Currently, this is in development, but the beta works like this:
 
 ## React
+
+Install the packages with `npm i garlic-react`, you should then import the `Garlic` class with:
+
+```js
+import Garlic from 'garlic';
+```
+
 You just need to wrap your html in the `garlic()` method:
 
 ```js
 function App() {
-  return garlic(
+  return Garlic.clove(
           <div className="App">
             <p>Go away robots :)</p>
           </div>

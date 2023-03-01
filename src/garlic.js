@@ -38,7 +38,7 @@ class Garlic {
     }
 
     static encode(string) {
-        return btoa(string+this.salt);
+        return btoa(string+(this.salt || ""));
     }
     static decodeBase64(root) {
         for (let i = 0; i < root.childNodes.length; i++) {
@@ -61,4 +61,5 @@ class Garlic {
 }
 
 
-export default Garlic;
+
+module.exports = Garlic;

@@ -1,13 +1,18 @@
 {
-  "name": "garlic",
-  "version": "1.0.0",
+  "name": "garlic-react",
+"author": "Daniel Alves Rosel",
+  "version": "1.0.2",
   "description": "",
   "main": "garlic.js",
-"type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-    "keywords": ["garlic", "protection"],
+  "keywords": [
+    "garlic",
+      "protection",
+    "privacy",
+    "security"
+  ],
   "author": "",
   "license": "ISC"
 }
