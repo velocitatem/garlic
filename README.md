@@ -7,7 +7,8 @@ Garlic is a simple, fast and secure way to protect your website from being scrap
 
 You write your code and text as you would any other day, just let garlic protect your content from scraping.
 
-
+| POV | Result|
+|----|---|  
 | You Write    | `<p>This is a test piece of text</p>` |
 | Scraper Sees | ![final](./media/final.png)           |
 | User Sees    | ![user](./media/user.png)             |
