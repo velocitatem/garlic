@@ -19,7 +19,7 @@ Currently, this is in development, but the beta works like this:
 ## React
 You just need to wrap your html in the `garlic()` method:
 
-```reactjs
+```js
 function App() {
   return garlic(
           <div className="App">
