@@ -8,7 +8,7 @@ import sqlite3
 import time
 import sys
 
-urls = ["http://localhost:37593"]
+urls = ["https://glittery-croquembouche-c25561.netlify.app/"]
 
 # connect to the database
 conn = sqlite3.connect('garlic.db')

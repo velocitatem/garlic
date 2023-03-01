@@ -57,8 +57,5 @@ And all is done!
 ## Astro
 Coming soon :)
 
-## Want some salt with that?
-We can also add some [salt](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/) to the encoding, add that extra step of security.
-
 # Why?
 AI needs data, your website might end-up in the dataset it uses for training. Dont want that? Garlic should help :)
