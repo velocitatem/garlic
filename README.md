@@ -29,6 +29,14 @@ function App() {
 };
 ```
 
+Go to `index.js` or anywhere before render. Add the following line of code:
+
+```js
+Garlic.peal(document);
+```
+
+And all is done!
+
 ## Astro
 Coming soon :)
 
