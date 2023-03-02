@@ -59,3 +59,7 @@ Coming soon :)
 
 # Why?
 AI needs data, your website might end-up in the dataset it uses for training. Dont want that? Garlic should help :)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/velocitatem/garlic.svg)](https://starchart.cc/velocitatem/garlic)
