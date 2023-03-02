@@ -12,13 +12,14 @@ function encodeTextNodes(node) {
     node.nodeValue = Buffer.from(node.nodeValue).toString('base64')
   } else {
     for (let i = 0; i < node.childNodes.length; i++) {
-      let val = node.childNodes[i].nodeValue
-      val = val ? val.trim() : val
-      if (node.childNodes[i].nodeType === 3 && val) {
-        node.childNodes[i].nodeValue = Buffer.from(val).toString('base64')
-      } else {
-        encodeTextNodes(node.childNodes[i])
-       }
+    // if its text, we encode it, otherwise we keep going
+    console.log(node.childNodes[i].nodeType, node.childNodes[i].nodeName)
+    if (node.childNodes[i].nodeType === 3) {
+      node.childNodes[i].nodeValue = Buffer.from(node.childNodes[i].nodeValue).toString('base64')
+    } else {
+      encodeTextNodes(node.childNodes[i])
+      }
+
     }
   }
 }
