@@ -2,6 +2,7 @@
 class Garlic {
 
     static clove(body) {
+
         let bodyCopy = {...body};
         if (body.props) {
             if (body.props.children) {
