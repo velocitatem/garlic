@@ -8,11 +8,14 @@ import sqlite3
 import time
 import sys
 
-urls = ["https://glittery-croquembouche-c25561.netlify.app/"]
+urls = ["https://garlic-react.netlify.app/", "https://garlic-vue.netlify.app/"]
 
 # connect to the database
 conn = sqlite3.connect('garlic.db')
 c = conn.cursor()
+
+# clear the database
+c.execute("DROP TABLE IF EXISTS garlic")
 
 # create the table if it does not exist
 c.execute('''CREATE TABLE IF NOT EXISTS websites (url text, content text)''')
