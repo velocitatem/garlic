@@ -15,9 +15,9 @@ You write your code and text as you would any other day, just let garlic protect
 
 # Try Now!
 
-1. Go to this website: https://glittery-croquembouche-c25561.netlify.app/
+1. Go to this website: https://garlic-astro.netlify.app/
 2. You will see normal text the way it should be
-3. Run the following command: `wget https://glittery-croquembouche-c25561.netlify.app/`
+3. Run the following command: `wget https://garlic-astro.netlify.app/`
 4. Open the index.html
 5. You will see the encoded text :)
 
