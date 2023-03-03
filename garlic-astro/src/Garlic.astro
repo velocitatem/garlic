@@ -1,0 +1,34 @@
+---
+---
+<script is:global>
+   function decodeBase64(root) {
+       for (let i = 0; i < root.childNodes.length; i++) {
+           const child = root.childNodes[i];
+           if (child.childNodes.length === 1 && child.childNodes[0].nodeType === 3) {
+               try {
+               const decoded = atob(child.childNodes[0].nodeValue).split("_yummy_")[0]
+               child.innerHTML = decoded;
+               console.log(child);
+               } catch (e) {
+                   console.log(e);
+               }
+           }
+           else if (child.nodeType === 3) {
+               try {
+               const decoded = atob(child.nodeValue).split("_yummy_")[0]
+               child.nodeValue = decoded;
+               console.log(child);
+               } catch (e) {
+                   console.log(e);
+               }
+           }
+           else {
+               decodeBase64(child);
+           }
+       }
+   }
+   document.addEventListener("DOMContentLoaded", function(event) {
+
+       decodeBase64(document.body);
+   });
+</script>

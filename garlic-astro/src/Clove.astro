@@ -1,0 +1,30 @@
+---
+let html = Astro.slots.render('default')
+html = await html
+// clean html, remove tabs and new lines and spaces that are not between tags
+html = html.replace(/>\s+</g, '><')
+html = html.replace(/(\r\n|\n|\r|\t)/gm, '')
+html = html.replace(/ +(?= )/g, '')
+import { JSDOM } from "jsdom";
+const dom = new JSDOM(html);
+function encodeTextNodes(node) {
+  if (node.nodeType === 3) {
+    node.nodeValue = Buffer.from(node.nodeValue).toString('base64')
+  } else {
+    for (let i = 0; i < node.childNodes.length; i++) {
+    // if its text, we encode it, otherwise we keep going
+    console.log(node.childNodes[i].nodeType, node.childNodes[i].nodeName)
+    if (node.childNodes[i].nodeType === 3) {
+      node.childNodes[i].nodeValue = Buffer.from(node.childNodes[i].nodeValue).toString('base64')
+    } else {
+      encodeTextNodes(node.childNodes[i])
+      }
+
+    }
+  }
+}
+encodeTextNodes(dom.window.document.body)
+let encodedHtml = dom.serialize()
+---
+<div set:html={encodedHtml}>
+</div>
