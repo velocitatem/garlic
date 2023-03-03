@@ -55,7 +55,31 @@ Garlic.peal(document);
 And all is done!
 
 ## Astro
-Coming soon :)
+
+With Astro, you just need to import the `Garlic` and `Clove` components into your layout:
+
+```astro
+import {Garlic, Clove} from 'garlic-astro';
+---
+<Garlic>
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <title>{title}</title>
+      </head>
+      <body>
+        <Clove>
+          <slot />
+        </Clove>
+      </body>
+  </html>
+</Garlic>
+```
+
+Ideally, `Garlic` should wrap the entire page, and `Clove` should wrap the content you want to protect. You can also use `Clove` multiple times, if you want to protect different parts of your page.
+
+You can then use the layout in `.astro` or `.mdx` files, and the content will be protected.
+
 
 # Why?
 AI needs data, your website might end-up in the dataset it uses for training. Dont want that? Garlic should help :)
