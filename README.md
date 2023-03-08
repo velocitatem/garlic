@@ -34,7 +34,7 @@ Install the packages with `npm i garlic-react`, you should then import the `Garl
 import Garlic from 'garlic';
 ```
 
-You just need to wrap your html in the `garlic()` method:
+You just need to wrap your html in the `Garlic.clove` method:
 
 ```js
 function App() {
