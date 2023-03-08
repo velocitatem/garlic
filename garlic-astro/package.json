@@ -2,6 +2,8 @@
   "name": "garlic-astro",
   "version": "0.0.1",
   "type": "module",
+    "author": "Daniel Alves Rosel",
+    "homepage": "https://github.com/velocitatem/garlic/tree/main",
   "exports": {
     ".": "./index.ts"
   },
