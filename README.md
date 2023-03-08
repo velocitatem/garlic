@@ -56,7 +56,7 @@ And all is done!
 
 ## Astro
 
-With Astro, you just need to import the `Garlic` and `Clove` components into your layout:
+install the package with `npm i garlic-astro`. With Astro, you just need to import the `Garlic` and `Clove` components into your layout:
 
 ```astro
 import {Garlic, Clove} from 'garlic-astro';
